@@ -3,7 +3,21 @@
 
 Algorithm is a sequence of steps that describe how a problem can be solved.Every computer program that ends with a result is a result of an Algorithm.
 
-### Basics of Algoritms
+### Basics of Algorithms
+**Categories of Algorithms**
+
+    Search − search an item in a data structure.
+
+    Sort −   sort items in a certain order.
+
+    Insert − insert item in a data structure.
+
+    Update − update an existing item in a data structure.
+
+    Delete − delete an existing item from a data structure.
+    
+    ---
+    
 ### Algorithm to Add 2 numbers and Print Results
 
 ```HTML
