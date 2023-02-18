@@ -1,4 +1,5 @@
-# Algorithms- 
+# Algorithms:
+---
 
 Algorithm is a sequence of steps that describe how a problem can be solved.Every computer program that ends with a result is a result of an Algorithm.
 
