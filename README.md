@@ -66,7 +66,7 @@ The second part the smaller problems are solved and added together to produce th
 uses the divide and conquer principle and repeatedly breaks down a list into several sublists until each sublist consists of a single element and then merges the sublists in a sorted manner. In simple terms, the first process is to break down a list of elements until it cannot be divided anymore e.g., take a list of 4 elements 9,4,5,3.
 
 ```
-### Both Left and Right sides of the list
+Both Left and Right sides of the list
 Divide:
 1.0 [9,4,5,3] -> 
    > Divide the list into two parts Left-A [9,4] | Right-B [5,3]. this is the first step before 
