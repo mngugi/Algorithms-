@@ -127,7 +127,7 @@ Note that this implementation assumes that the input array contains comparable e
  
 Algorithm Animations and Visualizations Refer to [Algoanim](http://algoanim.ide.sk/index.php?page=categories&cat=6) 
 ## Implementation using Python
-```
+```Python
 arr = [9, 4, 5, 3]
 
 def merge_sort(arr):
