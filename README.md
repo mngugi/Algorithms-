@@ -63,27 +63,109 @@ The second part the smaller problems are solved and added together to produce th
 `Merge Sort and Quick Sort`
 
 **Merge Sort**
-uses the divide and conquer principle and repeatedly breaks down a list into several sublists until each sublist 
-consists of a single element and then merges the sublists in a sorted manner. In simple terms the first process to break down a list
-of elements until it cannot be divided anymore e.g., take a list of 4 elements 9,4,5,3
+uses the divide and conquer principle and repeatedly breaks down a list into several sublists until each sublist consists of a single element and then merges the sublists in a sorted manner. In simple terms, the first process is to break down a list of elements until it cannot be divided anymore e.g., take a list of 4 elements 9,4,5,3.
+
 ```
+### Both Left and Right sides of the list
 Divide:
-1.0 [9,4,5,3] -> [9,4] | [5,3]. Give it index positions (index: [element]) that are 0:[9],1:[4],2:[5],3:[3]
-   Divide:
-   1.1 -> [9] | [4] | [5] | [3]. Now the elements are broken into single elements and ready for the next step. 
- 
-2.0 In this step perform a comparison between the elements:
-    if ([9] <= [4]):
-        Index 0 = 9
-        Index +=1
-    else
-        index 0 = 4 
-        Index +=1 
-Merge: In the merge, step compare 9 and 4 and allocate the smaller element into index 0. i.e if ...
+1.0 [9,4,5,3] -> 
+   > Divide the list into two parts Left-A [9,4] | Right-B [5,3]. this is the first step before 
+     sorting it recursively. 
+     > Logically We can now say we have two arrays with elements in them i.e, A[9,4] and B[5,3].
+
+1.1 -> Now initialize arrays Left-A[] and Right-B[] with i and j that is `A[i] and B[j]`, logically see it as index/pointers positions for example (index: [element]) that are `0:[9],1:[4],2:[5],3:[3].`
+
+   Divide further:
+1.2 -> `[9] | [4] | [5] | [3]`. Now the elements are broken into single elements and ready for the next step. 
+
+1.3 -> create an empty array, C[], that will acommodate the merged result. to explain further initialize two pointers, i and j, to the first elements of A and B, respectively, and create an empty array, C, for the merged result.
+
+Comparison: 
+2.0 -> Then, compare the elements pointed to by i and j, and allocate the smaller element into C. A[0] = 9 is actually larger than B[0] = 5, so allocate A[0] into C and advance j to the next element in B. In 2.1, A[1] = 4 is smaller than B[0] = 5, so allocate A[1] into C and advance i to the next element in A.
+
+2.1 -> Next, you compare the elements pointed to by i and j again. Now A[1] = 4 is smaller than B[0] = 5, so you allocate A[1] into C and advance j to the next element in B.
+    -> continue this process until all elements have been merged into C, and obtain the resulting sorted      array [3,4,5,9]
+
+3.0 Pseudo Code:
+function merge_sort(arr):
+    if length(arr) <= 1:
+        return arr
+    
+    middle = length(arr) / 2
+    left = merge_sort(arr[0:middle])
+    right = merge_sort(arr[middle:length(arr)])
+    return merge(left, right)
+
+function merge(left, right):
+    result = []
+    i = 0
+    j = 0
+    
+    while i < length(left) and j < length(right):
+        if left[i] <= right[j]:
+            result.append(left[i])
+            i = i + 1
+        else:
+            result.append(right[j])
+            j = j + 1
+    
+    while i < length(left):
+        result.append(left[i])
+        i = i + 1
+    
+    while j < length(right):
+        result.append(right[j])
+        j = j + 1
+    
+    return result
+
 
 ```
+This implementation uses a recursive divide-and-conquer approach, where the original input array is repeatedly divided into smaller sub-arrays until each sub-array contains only one element. These sub-arrays are then merged back together in sorted order. The merge function is responsible for merging two sorted sub-arrays into a single sorted array.
 
+Note that this implementation assumes that the input array contains comparable elements, such as integers or floating-point numbers. If the array contains objects or other data types that cannot be compared using the <= operator, you may need to modify the merge function accordingly.
  
 Algorithm Animations and Visualizations Refer to [Algoanim](http://algoanim.ide.sk/index.php?page=categories&cat=6) 
+## Implementation using Python
+```
+arr = [9, 4, 5, 3]
+
+def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    
+    middle = len(arr) // 2
+    left = merge_sort(arr[0:middle])
+    right = merge_sort(arr[middle:len(arr)])
+    return merge(left, right)
+
+def merge(left, right):
+    result = []
+    i = 0
+    j = 0
+    
+    while i < len(left) and j < len(right):
+        if left[i] <= right[j]:
+            result.append(left[i])
+            i = i + 1
+        else:
+            result.append(right[j])
+            j = j + 1
+    
+    while i < len(left):
+        result.append(left[i])
+        i = i + 1
+    
+    while j < len(right):
+        result.append(right[j])
+        j = j + 1
+    
+    return result
+
+sorted_arr = merge_sort(arr)
+print(sorted_arr)
+
+
+```
 
 **Quick Sort**
