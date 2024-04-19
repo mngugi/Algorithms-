@@ -205,3 +205,92 @@ print(sorted_arr)
 ```
 
 **Quick Sort**
+
+
+---
+
+### Binary Search
+
+Binary Search is an algorithm 
+
+<Continue ...>
+
+---
+
+### Bubble Sort Example
+
+Sort the following Array [ 31,41,59,26,41, 58]
+
+One can use various sorting algorithms to sort the given array. One of the simplest and commonly used algorithms is the Bubble Sort algorithm. Here's how you can implement it:
+
+``` python
+
+`1. Start with the first element of the array.`
+`2. Compare the current element with the next element.`
+`3. If the current element is greater than the next element, swap them.`
+`4. Repeat this process for each pair of adjacent elements until the end of the array.`
+`5. After the first pass, the largest element will be at the end of the array.`
+`6. Repeat steps 1-5 for the remaining elements (excluding the already sorted ones) until the entire array is sorted.`
+
+```
+---
+
+``` html
+Let's break down the concept of n−1 in the context of Bubble Sort in simpler terms:
+tarting Point:
+
+Imagine you have n elements in your array.
+When you begin sorting, you start comparing adjacent elements from the beginning of the array.
+
+**Passes through the Array**:
+
+In each pass, the algorithm compares adjacent elements and swaps them if they are in the wrong order.
+After the first pass, the largest (or smallest) element is guaranteed to be at the end of the array.
+Similarly, after the second pass, the second largest (or smallest) element is guaranteed to be in the second-to-last position, and so on.
+
+**Number of Passes:**
+
+Since each pass ensures that at least one element is in its correct position, you need to make n−1 passes to ensure that all elements are sorted.
+
+This is because after n−1 passes, the last remaining element will automatically be in its correct position without needing to be explicitly sorted.
+
+In simple terms, n−1 represents the number of passes required to sort an array of n elements using Bubble Sort. Each pass ensures that at least one element is placed in its correct position, and after n−1 passes, the entire array will be sorted.
+
+Code Bubble Sort
+
+def bubble_sort(arr):
+    n = len(arr)
+    # Traverse through all array elements
+    for i in range(n):
+        # Last i elements are already in place
+        for j in range(0, n - i - 1):
+            # Traverse the array from 0 to n - i - 1
+            # Swap if the element found is greater than the next element
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+
+# Test the bubble_sort function
+arr = [31, 41, 59, 26, 41, 58]
+bubble_sort(arr)
+print("Sorted array:", arr)
+
+
+
+The time complexity of the Bubble Sort algorithm is O(n ^2) where n is the number of elements in the array.
+
+Here's the breakdown of the time complexity:
+
+- In the worst-case scenario, where the array is in reverse order, the algorithm will need to perform n−1 passes (iterations) to sort the 
+  array.
+- During each pass, the algorithm compares adjacent elements and swaps them if they are in the wrong order.
+- For each pass, the number of comparisons decreases by 1, because the largest (or smallest) element "bubbles up" to its correct position
+  at the end of the array.
+- In total, the number of comparisons made by the algorithm is approximately  n×(n−1) which simplifies to  O(n ) in terms of time 
+  complexity.
+- Although Bubble Sort is easy to understand and implement, it is not efficient for large arrays because of its quadratic time complexity. 
+
+However, for small arrays or nearly sorted arrays, it can perform reasonably well.
+
+
+```
+
