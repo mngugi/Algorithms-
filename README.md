@@ -294,3 +294,21 @@ However, for small arrays or nearly sorted arrays, it can perform reasonably wel
 
 ```
 
+---
+
+**Checking fewer elements each time**
+
+``` html
+Maybe you’re wondering: as you go through the operations, the number
+of elements you have to check keeps decreasing. Eventually, you’re down
+to having to check just one element. So how can the run time still be
+O(n2)? That’s a good question, and the answer has to do with constants
+in Big O notation. I’ll get into this more in chapter 4, but here’s the gist.
+You’re right that you don’t have to check a list of n elements each time.
+
+You check n elements, then n – 1, n - 2 ... 2, 1. On average, you check a
+list that has 1/ 2 × n elements. The runtime is O(n × 1 /2 × n). But constants
+like 1 /2 are ignored in Big O notation (again, see chapter 4 for the full
+discussion), so you just write O(n × n) or O(n 2).
+
+```
