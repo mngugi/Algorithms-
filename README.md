@@ -108,6 +108,86 @@ O(n^3 + 100n^2 + 50n + 10) \Rightarrow O(n^3)
 
 This approach helps in quickly estimating the performance of an algorithm without unnecessary details. 🚀
 
+# 📌 Understanding Big O Notation: More Examples
+
+Big O notation describes how an algorithm’s runtime (or space usage) grows as the input size **n** increases. Below are examples of how we simplify and interpret Big O complexities.
+
+---
+
+## 1️⃣ Example: Ignoring Lower-Order Terms  
+Suppose we analyze an algorithm and determine that its time complexity is:
+
+\[
+T(n) = 4n^3 + 3n^2 + 2n + 5
+\]
+
+- The dominant term is **n³** because it grows the fastest as **n** increases.  
+- The terms **3n²**, **2n**, and **5** become insignificant compared to **n³** for large **n**.  
+- The constant coefficient **4** is ignored.  
+
+✅ **Final Big O notation:**  
+\[
+O(n^3)
+\]
+
+---
+
+## 2️⃣ Example: Dropping Constants  
+An algorithm runs in:
+
+\[
+T(n) = 500n + 1000
+\]
+
+- The **constant multiplier** (500) does not affect the growth rate.  
+- The **constant term** (1000) is ignored because it does not grow with **n**.  
+
+✅ **Final Big O notation:**  
+\[
+O(n)
+\]
+
+---
+
+## 3️⃣ Example: Logarithmic Complexity  
+If an algorithm has time complexity:
+
+\[
+T(n) = 3\log n + 2
+\]
+
+- The term **log n** dominates for logarithmic algorithms.  
+- The **coefficient 3** and **constant 2** are ignored.  
+
+✅ **Final Big O notation:**  
+\[
+O(\log n)
+\]
+
+---
+
+## 4️⃣ Example: Nested Loops (Multiplication Rule)  
+Consider a nested loop scenario:
+
+```python
+for i in range(n):      # Runs n times
+    for j in range(n):  # Runs n times for each i
+        print(i, j)
+
+```
+## 📌 Summary Table of Growth Rates
+
+| **Big O Notation**  | **Name**               | **Example Algorithm**                        |
+|---------------------|----------------------|---------------------------------------------|
+| **O(1)**           | Constant Time        | Accessing an element in an array           |
+| **O(log n)**       | Logarithmic Time     | Binary search                              |
+| **O(n)**           | Linear Time          | Iterating through an array                 |
+| **O(n log n)**     | Linearithmic Time    | Merge Sort, Quick Sort (best case)         |
+| **O(n²)**          | Quadratic Time       | Nested loops (e.g., Bubble Sort)           |
+| **O(2ⁿ)**          | Exponential Time     | Recursive Fibonacci                        |
+| **O(n!)**          | Factorial Time       | Traveling Salesman Problem                 |
+
+
 ---
     
 ### Algorithm to Add 2 numbers and Print Results
