@@ -229,6 +229,42 @@ for i in range(1, 6):
 print(factorial)
 
 ```
+**Example 5: Sequential Loops (Addition Rule)**
+```python
+for i in range(n):  # Runs n times
+    print(i)
+
+for j in range(n):  # Runs n times
+    print(j)
+
+```
+## Sequential Loops: Addition Rule
+
+The first loop runs **O(n)**.  
+The second loop runs **O(n)**.  
+
+Since they run sequentially, we **add** their complexities:  
+\[
+O(n) + O(n) = O(2n)
+\]
+Since Big O notation ignores constants, we drop **2**, simplifying to:  
+\[
+O(n)
+\]
+
+---
+
+## Example 6: Exponential Complexity
+
+Consider an algorithm with the following **recursive function**:
+
+```python
+def fib(n):
+    if n <= 1:
+        return n
+    return fib(n - 1) + fib(n - 2)
+```
+
 ---
 ### Divide and Conquer Algorithm
 In this case, divide the algorithm into two parts.
