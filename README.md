@@ -49,6 +49,65 @@ Example: Binary Search, where the algorithm searches for a target element in a s
 
 Example: Matrix Multiplication, where the algorithm multiplies two matrices by taking the dot product of each row in the first matrix with each column in the second matrix. The time complexity of this algorithm is O(n⋅m⋅p), where n, m, and p are the dimensions of the matrices being multiplied. In the case of two square matrices of size n, the time complexity would be O(n^3).
 
+**NB**
+
+# Understanding Big O Notation and Growth Rates
+
+Big O notation is used to describe the efficiency of an algorithm in terms of how its runtime (or space usage) grows as the input size increases.
+
+## Key Idea: Keeping the Fastest Growing Term  
+When analyzing time complexity, we only keep the term that grows the fastest as the input size (**n**) increases and discard lower-order terms and constants.
+
+### Example:  
+If an algorithm has a time complexity expressed as:
+
+\[
+T(n) = 5n^2 + 3n + 7
+\]
+
+For small values of **n**, the terms **3n** and **7** may contribute to execution time, but as **n** becomes very large, the **n²** term dominates because it grows the fastest.
+
+Thus, in Big O notation, we express this as:
+
+\[
+O(n^2)
+\]
+
+We ignore constants (like **5**) because Big O notation focuses on **asymptotic behavior**, meaning how the function behaves for large values of **n**.
+
+---
+
+## General Rule for Simplification  
+
+### 1️⃣ Drop Constants  
+**Example:**  
+\[
+O(5n) \Rightarrow O(n)
+\]  
+Multiplicative constants don’t affect growth rate.
+
+### 2️⃣ Keep the Dominant Term  
+**Example:**  
+\[
+O(n^2 + n) \Rightarrow O(n^2)
+\]  
+since **n²** grows faster than **n**.
+
+### 3️⃣ Ignore Lower-Order Terms  
+**Example:**  
+\[
+O(n^3 + 100n^2 + 50n + 10) \Rightarrow O(n^3)
+\]  
+
+**Why Do We Do This?**
+
+- In algorithm analysis, we focus on how the execution time scales with input size.
+- Lower-order terms and constants become negligible for large 𝑛
+- This helps us compare algorithms effectively without unnecessary details.
+---
+
+This approach helps in quickly estimating the performance of an algorithm without unnecessary details. 🚀
+
 ---
     
 ### Algorithm to Add 2 numbers and Print Results
