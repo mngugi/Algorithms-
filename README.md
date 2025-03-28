@@ -488,3 +488,144 @@ like 1 /2 are ignored in Big O notation (again, see chapter 4 for the full
 discussion), so you just write O(n × n) or O(n 2).
 
 ```
+**Big O of 1**
+```python 
+import tkinter as tk
+
+root = tk.Tk()
+root.geometry('400x400')
+root.resizable(True, True)
+
+label = tk.Label(root, text="", justify="left", background='yellow', font=("calibri", 10))
+label.pack(pady=10)
+
+num_one = 30
+num_two = 60
+
+def total_sum():
+    total = num_one + num_two
+    label.config(text=total)
+
+def sum_difference():
+    difference = num_one - num_two
+    label.config(text=difference)
+
+    if difference < 0:
+        label.config(text=f"Warning: Difference is negative: {difference}", background='yellow')
+    else:
+        label.config(text="Difference is positive or zero", background='white')
+
+def product():
+    result = num_one * num_two
+    label.config(text=result)
+
+def quotient():
+    if num_two == 0:
+        label.config(text="Error: Division by zero", background='red')
+    else:
+        result = num_one / num_two
+        label.config(text=result)
+
+# Dictionary to map button labels to their functions
+operations = {
+    "Total Sum": total_sum,
+    "Sum Difference": sum_difference,
+    "Product": product,   # Fixed case
+    "Quotient": quotient  # Fixed case
+}
+
+# Creating buttons dynamically
+for text, func in operations.items():
+    tk.Button(root, text=text, command=func).pack(pady=5)
+
+root.mainloop()
+
+
+```
+**Big O Complexity Analysis of Your Tkinter Code**
+
+Let's break down the complexity of each function and determine the overall Big O notation.
+
+1️⃣ Analyzing Each Function
+(a) `total_sum()`
+```python
+
+def total_sum():
+    total = num_one + num_two  # O(1)
+    label.config(text=total)   # O(1)
+```
+
+✅ Big O Complexity: O(1)
+
+Addition of two numbers is constant time.
+Updating the label is also O(1), since it's a simple operation.
+
+(b) `sum_difference()`
+```python
+
+def sum_difference():
+    difference = num_one - num_two  # O(1)
+    label.config(text=difference)   # O(1)
+
+    if difference < 0:
+        label.config(text=f"Warning: Difference is negative: {difference}", background='yellow')  # O(1)
+    else:
+        label.config(text="Difference is positive or zero", background='white')  # O(1)
+```
+✅ Big O Complexity: O(1)
+
+The subtraction operation is constant time.
+The if condition check is O(1).
+Updating the label is O(1), whether the difference is negative or not.
+(c) `product()`
+```python
+
+def product():
+    result = num_one * num_two  # O(1)
+    label.config(text=result)   # O(1)
+```
+
+✅ Big O Complexity: O(1)
+
+Multiplication of two numbers is O(1).
+Updating the label is O(1).
+(d) `quotient()`
+```python
+
+def quotient():
+    if num_two == 0:  # O(1)
+        label.config(text="Error: Division by zero", background='red')  # O(1)
+    else:
+        result = num_one / num_two  # O(1)
+        label.config(text=result)   # O(1)
+```
+✅ Big O Complexity: O(1)
+
+Division operation is constant time.
+if condition is O(1).
+Updating the label is O(1).
+
+2️⃣ Button Creation Loop
+```python
+
+for text, func in operations.items():
+    tk.Button(root, text=text, command=func).pack(pady=5)  # O(1) per iteration
+```
+✅ Big O Complexity: O(n), where n is the number of operations (4 buttons).
+
+
+Since the number of buttons is fixed (n = 4), this technically remains O(1) in practical terms.
+If more buttons were dynamically added, it would scale as O(n).
+
+3️⃣ Overall Complexity
+The entire program consists of constant-time operations (arithmetic operations, condition checks, UI updates), with the exception of button creation, which is O(n).
+
+Since n is small and fixed in this case, the overall Big O complexity of the program remains:
+
+
+- 🔹 O(1) (Constant Time) in practical terms.
+- 🔹 If buttons were dynamically added based on user input, it could become O(n).
+
+✅ Final Verdict:
+
+The code runs in constant time O(1), as every function executes in constant time, and the loop creating buttons is limited to a small fixed number.
