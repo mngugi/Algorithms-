@@ -1,4 +1,43 @@
 Welcome to the Algorithms- wiki!
+# 📚 Algorithms Repository
+
+A comprehensive collection of classic and modern algorithms implemented in multiple programming languages. This repository is designed for learning, practicing, and improving algorithmic thinking, with clean, well-documented code suitable for interviews, competitive programming, and academic study.
+
+## 🔍 What You'll Find
+
+- **Sorting & Searching Algorithms**
+- **Graph Algorithms** (DFS, BFS, Dijkstra's, Kruskal's, etc.)
+- **Dynamic Programming**
+- **Greedy Techniques**
+- **Backtracking & Recursion**
+- **Mathematical Algorithms**
+- **Data Structures** (Stacks, Queues, Trees, Heaps, etc.)
+
+## 💡 Ideal For
+
+- Computer Science students  
+- Competitive programmers  
+- Interview preparation  
+- Anyone looking to deepen their understanding of algorithms
+
+## 🛠️ Languages Used
+
+- Python  
+- C++  
+- JavaScript  
+*(More coming soon)*
+
+## 📂 Structure
+
+Each algorithm is stored in a dedicated folder with:
+- Source code
+- Input/output examples (where applicable)
+- Comments and explanations
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
 # Algorithms:
 ---
 
