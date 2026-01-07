@@ -2,9 +2,9 @@
 #include <string.h>
 #include "bubble_sort.h"
 
-void bubble_sort_strings(char *arr[], int n);{
+void bubble_sort_strings(char *arr[], int n){
 
-    char t*temp;
+    char *temp;
 
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - i - 1; j++) {

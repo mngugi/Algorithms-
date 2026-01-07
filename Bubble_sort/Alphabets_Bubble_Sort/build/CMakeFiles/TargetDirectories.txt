@@ -1,0 +1,3 @@
+/home/lamdax86/Documents/GitHub/Algorithms-/Bubble_sort/Alphabets_Bubble_Sort/build/CMakeFiles/bubble_sort.dir
+/home/lamdax86/Documents/GitHub/Algorithms-/Bubble_sort/Alphabets_Bubble_Sort/build/CMakeFiles/edit_cache.dir
+/home/lamdax86/Documents/GitHub/Algorithms-/Bubble_sort/Alphabets_Bubble_Sort/build/CMakeFiles/rebuild_cache.dir
