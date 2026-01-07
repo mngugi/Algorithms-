@@ -1,28 +1,23 @@
 #include <stdio.h>
 #include "bubble_sort.h"
 
-int main(){
+void bubble_sort(int arr[], int n) {
+    int temp;
 
-    int num_array[] =  {1,9,3,5,6,7,8,2,4}; // array of 9 numbers to be sorted
-    int array_size = sizeof(num_array)/sizeof(num_array[0]); //calculates the size of the array
-
-    //Bubble Sort Algorithm
-    for(int i = 0; i < array_size-1; i++){
-        for(int j = 0; j < array_size-i-1; j++){
-            if(num_array[j] > num_array[j+1]){
-                //swapping elements
-                int temp = num_array[j];
-                num_array[j] = num_array[j+1];
-                num_array[j+1] = temp;
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
             }
         }
     }
+}
 
-    //Printing the sorted array
-    printf("Sorted array: ");
-    for(int i = 0; i < array_size; i++){
-        printf("%d ", num_array[i]);
+void print_array(const int arr[], int n) {
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
     }
-    return 0;
-
+    printf("\n");
 }

@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/bubble_sort.dir/link.d CMakeFiles/bubble_sort.dir/main.c.o CMakeFiles/bubble_sort.dir/bubble_sort.c.o -o bubble_sort
