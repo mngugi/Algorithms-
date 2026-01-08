@@ -7,8 +7,9 @@ void bubble_sort_strings(char *arr[], int n){  // arr is an array of pointers
 
     char *temp;
 
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = 0; j < n - i - 1; j++) {
+    for (int i = 0; i < n - 1; i++) { //i counts passes. Each pass pushes the largest string to the end.
+        for (int j = 0; j < n - i - 1; j++) { // j iterates over unsorted elements.
+            //n - i - 1 avoids comparing elements that are already in place.
             if (strcmp(arr[j], arr[j + 1]) > 0) { //strcmp(arr[j], arr[j+1]) compares the strings lexicographically.
                 temp = arr[j];
                 arr[j] = arr[j + 1];
