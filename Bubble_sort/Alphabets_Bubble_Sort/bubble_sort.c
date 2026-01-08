@@ -12,7 +12,7 @@ void bubble_sort_strings(char *arr[], int n){  // arr is an array of pointers
             //n - i - 1 avoids comparing elements that are already in place.
             if (strcmp(arr[j], arr[j + 1]) > 0) { //strcmp(arr[j], arr[j+1]) compares the strings lexicographically.If arr[j] is alphabetically after arr[j+1], swap them
                 temp = arr[j]; // save pointer to the first string. temp now points to "apple" for example
-                arr[j] = arr[j + 1]; //arr[j] = arr[j + 1]; → move pointer of second string into first position
+                arr[j] = arr[j + 1]; //arr[j] = arr[j + 1]; → move pointer of second string into first position. arr[j] now points to "carrots"
                 arr[j + 1] = temp;
             }
         }
