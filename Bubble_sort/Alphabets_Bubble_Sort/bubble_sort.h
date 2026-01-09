@@ -1,3 +1,5 @@
+// Header guards prevents multiple inclusion errors
+
 #ifndef BUBBLESORT_H
 #define BUBBLESORT_H
 
