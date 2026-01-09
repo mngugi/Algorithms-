@@ -4,7 +4,7 @@
 #define BUBBLESORT_H
 
 void bubble_sort_strings(char *arr[], int n); // function declaration prototypes
-void print_strings(char *arr[], int n);
+void print_strings(char *arr[], int n); // arr - array of strings, n - number of strings
 
 
-#endif
+#endif // end of header guard
