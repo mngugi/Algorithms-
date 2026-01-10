@@ -22,6 +22,9 @@ void bubble_sort_strings(char *arr[], int n){  // arr is an array of pointers
 
 void print_strings(char *arr[], int n) { //an array of pointers to char, i.e. an array of strings. int n number strings in an array.
     for (int i = 0; i < n; i++) { // loops through each string in the array.
-        printf("%s\n", arr[i]);
+        printf("%s\n", arr[i]);//arr[i] Each element is a char * (a C string).
+
+printf("%s\n", arr[i]);
+//Prints the string followed by a newline.
     }
 }
