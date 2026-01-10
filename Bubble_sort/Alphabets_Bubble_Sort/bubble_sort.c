@@ -20,8 +20,8 @@ void bubble_sort_strings(char *arr[], int n){  // arr is an array of pointers
     }
 }
 
-void print_strings(char *arr[], int n) {
-    for (int i = 0; i < n; i++) {
+void print_strings(char *arr[], int n) { //an array of pointers to char, i.e. an array of strings. int n number strings in an array.
+    for (int i = 0; i < n; i++) { // loops through each string in the array.
         printf("%s\n", arr[i]);
     }
 }
