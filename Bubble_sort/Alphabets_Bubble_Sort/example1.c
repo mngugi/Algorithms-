@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void print_strings(char *arr[], int n);   // ✅ prototype
+void print_strings(char *arr[], int n);   // prototype
 
 int main() {
     char *names[] = {"Alice", "Bob", "Charlie"};
