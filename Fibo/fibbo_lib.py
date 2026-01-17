@@ -4,7 +4,7 @@ def fibbo_function():
 
     result = "0\n1\n"
 
-    for i in range(10):
+    for i in range(18):
         new_fibonacci = first_num + second_num
         result += str(new_fibonacci) + "\n"
         first_num = second_num
