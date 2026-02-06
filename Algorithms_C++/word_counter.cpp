@@ -4,7 +4,13 @@
 
 using namespace std;
 
-int main(int argc, char** argv) {
+// println helper
+template <typename T>
+void println(const T& value) {
+    cout << value << '\n';
+}
+
+int main() {
     map<string, int> dict;
     string s;
 
@@ -12,9 +18,9 @@ int main(int argc, char** argv) {
         ++dict[s];
     }
 
-    map<string, int>::iterator it = dict.begin();
-    for (; it != dict.end(); ++it) {
-        cout << it->first << ": " << it->second << "\n";
+    for (const auto& [word, count] : dict) {
+        cout << word << ": " << count << '\n';
+        // or: println(word + ": " + to_string(count));
     }
 
     return 0;
