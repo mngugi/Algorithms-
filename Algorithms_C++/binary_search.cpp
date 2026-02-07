@@ -46,6 +46,7 @@ int main() {
     root = insert(root, 30);
     root = insert(root, 70);
     root = insert(root, 20);
+    root = insert(root, 10);
     root = insert(root, 40);
     root = insert(root, 60);
     root = insert(root, 80);
