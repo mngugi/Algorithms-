@@ -436,7 +436,7 @@ Binary Search is an algorithm
 
 Sort the following Array [ 31,41,59,26,41, 58]
 
-One can use various sorting algorithms to sort the given array. One of the simplest and commonly used algorithms is the Bubble Sort algorithm. Here's how you can implement it:
+One can use various sorting algorithms to sort the given array. One of the simplest and most commonly used algorithms is the Bubble Sort algorithm. Here's how you can implement it:
 
 ``` python
 
