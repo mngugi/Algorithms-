@@ -309,27 +309,27 @@ Step 7 - Output the value of "factorial" to the user.
 ### Divide and Conquer Algorithm
 In this case, divide the algorithm into two parts.
 The first part divides the problem into smaller subproblems of the same type.
-In the second part the smaller problems are solved and added together to produce the final solution 
+In the second part, the smaller problems are solved and added together to produce the final solution 
 **Examples are**
 `Merge Sort and Quick Sort`
 
 **Merge Sort**
-uses the divide and conquer principle and repeatedly breaks down a list into several sublists until each sublist consists of a single element and then merges the sublists in a sorted manner. In simple terms, the first process is to break down a list of elements until it cannot be divided anymore e.g., take a list of 4 elements 9,4,5,3.
+uses the divide and conquer principle and repeatedly breaks down a list into several sublists until each sublist consists of a single element and then merges the sublists in a sorted manner. In simple terms, the first process is to break down a list of elements until it cannot be divided anymore, e.g., take a list of 4 elements 9,4,5,3.
 
 ```
 Both the Left and Right sides of the list
 Divide:
 1.0 [9,4,5,3] -> 
-   > Divide the list into two parts Left-A [9,4] | Right-B [5,3]. this is the first step before 
+   > Divide the list into two parts: Left-A [9,4] | Right-B [5,3]. This is the first step before 
      sorting it recursively. 
-     > Logically We can now say we have two arrays with elements in them i.e, A[9,4] and B[5,3].
+     > Logically We can now say we have two arrays with elements in them, i.e., A[9,4] and B[5,3].
 
 1.1 -> Now initialize arrays Left-A[] and Right-B[] with i and j that is `A[i] and B[j]`, logically see it as index/pointers positions for example (index: [element]) that are `0:[9],1:[4],2:[5],3:[3].`
 
    Divide further:
-1.2 -> `[9] | [4] | [5] | [3]`. Now the elements are broken into single elements and ready for the next step. 
+1.2 -> `[9] | [4] | [5] | [3]`. Now the elements are broken into single elements and are ready for the next step. 
 
-1.3 -> create an empty array, C[], that will acommodate the merged result. to explain further initialize two pointers, i and j, to the first elements of A and B, respectively, and create an empty array, C, for the merged result.
+1.3 -> create an empty array, C[], that will acommodate the merged result. To explain further, initialize two pointers, i and j, to the first elements of A and B, respectively, and create an empty array, C, for the merged result.
 
 Comparison: 
 2.0 -> Then, compare the elements pointed to by i and j, and allocate the smaller element into C. A[0] = 9 is actually larger than B[0] = 5, so allocate A[0] into C and advance j to the next element in B. In 2.1, A[1] = 4 is smaller than B[0] = 5, so allocate A[1] into C and advance i to the next element in A.
