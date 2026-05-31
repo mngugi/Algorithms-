@@ -56,7 +56,7 @@ An algorithm is a sequence of steps that describes how a problem can be solved. 
 ## BIG O
 
 BIG O describes the computational complexity of an algorithm. This has two parts:
-1. Time Complexity. Amount of time an algorithm needs to run relative to the input. 
+1. Time Complexity. The amount of time an algorithm needs to run relative to the input. 
 2. Space Complexity. Memory space is allocated by the algorithm relative to the input size.
 
 Complexity is defined by a function that can change with the input.
