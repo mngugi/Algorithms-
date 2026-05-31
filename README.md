@@ -70,7 +70,7 @@ O(n⋅m)
 ```    
 **O(n)** - This time complexity represents linear time, which means the running time of an algorithm is directly proportional to the size of the input data. As the input size increases, the running time also increases at a linear rate.
 
-Example: Linear search in an array where each element is compared with the target element one by one. In the worst case scenario, where the target element is the last element or not present in the array, the algorithm will need to check all elements in the array. The time complexity of this algorithm is O(n).
+Example: Linear search in an array where each element is compared with the target element one by one. In the worst-case scenario, where the target element is the last element or not present in the array, the algorithm will need to check all elements in the array. The time complexity of this algorithm is O(n).
 
 **O(n^2)** - This time complexity represents quadratic time, which means the running time of an algorithm grows exponentially with the input size. It is commonly seen in algorithms that involve nested loops.
 
