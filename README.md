@@ -273,13 +273,13 @@ def fib(n):
     return fib(n - 1) + fib(n - 2)
 ```
 ---
-### Algorithm to Add 2 numbers and Print Results
+### Algorithm to Add 2 Numbers and Print Results
 
 ```HTML
 Step 1 − Start a program. /** Write program title and purpose **/
 Step 2 − declare three integers. a, b & c. /**int, float or double **/
 Step 3 − define values of a & b. /** a,b,c are variables that define value types **/
-Step 4 − add values of a & b . /**(a+b)**/
+Step 4 − add values of a & b. /**(a+b)**/
 Step 5 − store output of step 4 to c. /**c=(a+b)**/
 Step 6 − print c. /**println("Answer", +c )**/
 Step 7 − STOP
