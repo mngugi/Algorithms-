@@ -314,7 +314,7 @@ In the second part, the smaller problems are solved and added together to produc
 `Merge Sort and Quick Sort`
 
 **Merge Sort**
-uses the divide and conquer principle and repeatedly breaks down a list into several sublists until each sublist consists of a single element and then merges the sublists in a sorted manner. In simple terms, the first process is to break down a list of elements until it cannot be divided anymore, e.g., take a list of 4 elements 9,4,5,3.
+uses the divide and conquer principle and repeatedly breaks down a list into several sublists until each sublist consists of a single element, and then merges the sublists in a sorted manner. In simple terms, the first process is to break down a list of elements until it cannot be divided anymore, e.g., take a list of 4 elements 9,4,5,3.
 
 ```
 Both the Left and Right sides of the list
@@ -322,7 +322,7 @@ Divide:
 1.0 [9,4,5,3] -> 
    > Divide the list into two parts: Left-A [9,4] | Right-B [5,3]. This is the first step before 
      sorting it recursively. 
-     > Logically We can now say we have two arrays with elements in them, i.e., A[9,4] and B[5,3].
+     > Logically, we can now say we have two arrays with elements in them, i.e., A[9,4] and B[5,3].
 
 1.1 -> Now initialize arrays Left-A[] and Right-B[] with i and j that is `A[i] and B[j]`, logically see it as index/pointers positions for example (index: [element]) that are `0:[9],1:[4],2:[5],3:[3].`
 
@@ -452,7 +452,7 @@ One can use various sorting algorithms to sort the given array. One of the simpl
 
 ``` html
 Let's break down the concept of n−1 in the context of Bubble Sort in simpler terms:
-tarting Point:
+Starting Point:
 
 Imagine you have n elements in your array.
 When you begin sorting, you start comparing adjacent elements from the beginning of the array.
